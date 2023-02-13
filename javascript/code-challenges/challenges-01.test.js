@@ -163,6 +163,7 @@ const fizzbuzz = (arr) => {
       : output.push(num);
   });
 
+  console.log(output);
   return output;
 };
 
