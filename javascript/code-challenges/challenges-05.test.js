@@ -198,15 +198,15 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  /*  console.log(arr);
-  return arr.reduce((character, acc) => {
-    console.log(character);
-    character.children ? acc + character.children.length : acc + 0;
+  /*   return arr.reduce((character, acc) => {
+    if (character.children) {
+      return acc + Object.keys(character.children).length;
+    } else {
+      return acc;
+    }
   }, 0);
   */
 };
-
-console.log(countNumberOfChildren(characters));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
