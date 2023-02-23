@@ -51,7 +51,6 @@ const checkValues = (obj, value) => {
   return Object.values(obj).includes(value);
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -72,7 +71,14 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  let names = Object.keys(obj);
+  let numbers = Object.values(obj);
+
+  let nameAndNumber = names.map((name, i) => {
+    return `${name}: ${numbers[i]}`;
+  });
+
+  return nameAndNumber;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,7 +132,12 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+
+  houses = arr.map((character) => {
+    let index = Object.keys(character).indexOf("house");
+    return Object.values(character)[index];
+  });
+
   return houses;
 };
 
@@ -141,10 +152,16 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let person = arr.find((person) => {
+    return person.name === character;
+  });
+  let values = Object.values(person);
+
+  return Array.isArray(values[2]) ? true : false;
 };
+
+console.log(hasChildrenValues(characters, "Sansa"));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
