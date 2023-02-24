@@ -11,6 +11,7 @@ function returnTen(str) {
   return str.split("").splice(-10);
 }
 //
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -25,6 +26,7 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
+
 const findMax = (matrix) => {
   let currentMax = 0;
   matrix.forEach((arr) => {
@@ -53,6 +55,7 @@ For example:
 
 return: 35
 ------------------------------------------------------------------------------------------------ */
+
 const totalSum = (matrix) => {
   let currentTotal = 0;
   matrix.forEach((arr) => {
