@@ -108,6 +108,7 @@ const grandTotal = (stores) => {
       hourTotals[i] += hour;
     });
   });
+  //
   return hourTotals;
 };
 
