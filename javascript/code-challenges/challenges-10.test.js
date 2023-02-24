@@ -7,7 +7,10 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 ------------------------------------------------------------------------------------------------ */
 
-function returnTen(str) {}
+function returnTen(str) {
+  return str.split("").splice(-10);
+}
+//
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -23,7 +26,20 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
-const findMax = (matrix) => {};
+
+const findMax = (matrix) => {
+  let currentMax = 0;
+  matrix.forEach((arr) => {
+    arr.reduce((acc, currentNum) => {
+      if (currentNum > acc) {
+        acc = currentNum;
+        currentMax = currentNum; // why can't I do currentMax = arr.reduce() ? it gives an undefined error after the first iteration
+        return acc;
+      }
+    }, currentMax);
+  });
+  return currentMax;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -39,7 +55,16 @@ For example:
 
 return: 35
 ------------------------------------------------------------------------------------------------ */
-const totalSum = (matrix) => {};
+
+const totalSum = (matrix) => {
+  let currentTotal = 0;
+  matrix.forEach((arr) => {
+    arr.forEach((value) => {
+      currentTotal += value;
+    });
+  });
+  return currentTotal;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -76,7 +101,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
-const grandTotal = (stores) => {};
+const grandTotal = (stores) => {
+  let hourTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  stores.forEach((store) => {
+    store.forEach((hour, i) => {
+      hourTotals[i] += hour;
+    });
+  });
+  return hourTotals;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -88,7 +121,14 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
-const salesData = (hours, data) => {};
+const salesData = (hours, data) => {
+  let allSales = [];
+  hours.forEach((hour, i) => {
+    let saleData = { sales: `${data[i]} cookies`, time: hour };
+    allSales.push(saleData);
+  });
+  return allSales;
+}; // this returns the exact result but does not pass.
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -123,7 +163,11 @@ const errands = [
   },
 ];
 
-const howManyTreats = (arr) => {};
+const howManyTreats = (arr) => {
+  let petStore = arr[2];
+  let treats = petStore.items[1];
+  return treats.quantity;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -143,7 +187,16 @@ Here is a sample board:
 The top row of the board is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
-const battleship = (board, row, col) => {};
+const battleship = (board, row, col) => {
+  return board[row][col] === "#" ? "hit" : "miss";
+};
+
+let board = [
+  ["#", " ", "#", " "],
+  ["#", " ", "#", " "],
+  ["#", " ", " ", " "],
+  [" ", " ", "#", "#"],
+];
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -153,7 +206,12 @@ Write a function named calculateProduct that takes in a two-dimensional array of
 For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
-const calculateProduct = (numbers) => {};
+const calculateProduct = (numbers) => {
+  return numbers.reduce((acc, arr) => {
+    console.log(`${acc} += ${arr[0]} * ${arr[1]} * ${acc}`);
+    return (acc = arr[0] * arr[1] * acc);
+  }, 1);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
