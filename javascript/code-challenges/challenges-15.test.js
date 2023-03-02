@@ -137,7 +137,11 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    if (a[property] > b[property]) return 1;
+    if (a[property] < b[property]) return -1;
+    if (a[property] === b[property]) return 0;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -153,7 +157,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+  return url.match(/^(https:\/\/)/) ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -176,7 +180,46 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  let goodRow = board.some((row) => {
+    return checkRow(board, row);
+  });
+  let goodCol = board.some((row, index) => {
+    return checkCol(board, index);
+  });
+  let goodDiagonal = checkDiagonal(board);
+
+  return goodRow || goodCol || goodDiagonal ? true : false;
+};
+
+const checkRow = (board, row) => {
+  let spot = row[0];
+
+  if (spot === "X" || spot === "O") {
+    if ([row][1] === spot && [row][2] === "spot") return true;
+  }
+  return false;
+};
+
+const checkCol = (board, index) => {
+  let spot = board[0][index];
+  if (spot === "X" || spot === "O") {
+    if (board[1][index] === spot && board[2][index] === spot) return true;
+  }
+  return false;
+};
+
+const checkDiagonal = (board) => {
+  let spot1 = board[0][0];
+  let spot2 = board[0][2];
+
+  if (spot1 === "X" || spot1 === "O") {
+    if (board[1][1] === spot1 && board[2][2] === spot1) return true;
+  }
+  if (spot2 === "X" || spot2 === "0") {
+    if (board[1][1] === spot2 && board[2][0] === spot2) return true;
+  }
+
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
