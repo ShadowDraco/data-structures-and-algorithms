@@ -4,7 +4,7 @@ Write a function called arrayReverse that takes in an array as an argument and r
 
 ## Whiteboard Process
 
-![Whiteboard for array-reverse]('./../assets/UMLArrayReverse.png')
+![Whiteboard for array-reverse](./assets/UMLArrayReverse.png)
 
 ## Approach & Efficiency
 
