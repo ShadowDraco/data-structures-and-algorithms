@@ -86,8 +86,9 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the **Actions** tab
 
 - TOC:
--
 - Code challenges from 301 and code challenges from 401
-- array-reverse
-- code-challenges from code 301 1-15
+- [array-insert-shift](./array-insert-shift/README.md)
+- [array-reverse](./array-reverse/README.md)
+
+- code-challenges from code 301
 - linked-list challenge (not yet complete)
