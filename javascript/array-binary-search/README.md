@@ -2,6 +2,8 @@
 
 Write a function called arrayBinarySearch which takes in an array and a searchKey to find. Without utilizing any of the built-in methods available to your language, return the index of the searchKey - we are assuming that the array is not sorted due to the format of the inputs given
 
+[Pull Request 22](https://github.com/ShadowDraco/data-structures-and-algorithms/pull/22)
+
 ## Whiteboard Process
 
 ![Whiteboard for array-binary-search](./CodeChallenge3.png)
