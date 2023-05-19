@@ -90,6 +90,5 @@ Note that when you check your code into GitHub, all of your tests will automatic
 - [array-binary-search](./array-binary-search/README.md)
 - [array-insert-shift](./array-insert-shift/README.md)
 - [array-reverse](./array-reverse/README.md)
-
 - code-challenges from 301
-- linked-list challenge (not yet complete)
+- [linked-list](./linked-list/README.md)
