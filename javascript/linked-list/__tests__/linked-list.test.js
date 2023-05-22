@@ -53,12 +53,13 @@ describe("Linked List", () => {
     expect(list.toString()).toEqual("{ 3 } -> { 2 } -> { 1 } -> { NULL }");
   });
 
-  it("can insertBefore and insertAfter", () => {
+  it("can insertBefore and insertAfter, and in the middle, front, end", () => {
     list.append(4);
     list.insertBefore(4, 5);
     list.insertAfter(5, 6);
+    list.insertBefore(3, 0);
 
     expect(list.includes(5)).toBeTruthy();
-    expect(list.read()).toEqual([3, 2, 1, 5, 6, 4]);
+    expect(list.read()).toEqual([0, 3, 2, 1, 5, 6, 4]);
   });
 });

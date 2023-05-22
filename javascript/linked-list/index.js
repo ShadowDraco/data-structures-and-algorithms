@@ -81,7 +81,7 @@ class LinkedList {
   insertBefore(targetValue, newValue) {
     if (!this.head) throw new Error("List is empty");
 
-    if (!this.head.value === targetValue) {
+    if (this.head.value === targetValue) {
       const newNode = new Node(newValue);
       newNode.next = this.head;
       this.head = newNode;
