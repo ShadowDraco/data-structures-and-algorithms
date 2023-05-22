@@ -52,18 +52,6 @@ class LinkedList {
     return valueList;
   }
 
-  find(value) {
-    let current = this.head;
-
-    while (current !== null) {
-      if (current.value === value) return current.value;
-
-      current = current.next;
-    }
-
-    return false;
-  }
-
   includes(value) {
     let current = this.head;
 
