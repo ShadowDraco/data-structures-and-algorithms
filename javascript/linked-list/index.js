@@ -52,18 +52,6 @@ class LinkedList {
     return valueList;
   }
 
-  find(value) {
-    let current = this.head;
-
-    while (current !== null) {
-      if (current.value === value) return current.value;
-
-      current = current.next;
-    }
-
-    return false;
-  }
-
   includes(value) {
     let current = this.head;
 
@@ -88,6 +76,59 @@ class LinkedList {
     result += "{ NULL }";
 
     return result;
+  }
+
+  insertBefore(targetValue, newValue) {
+    if (!this.head) throw new Error("List is empty");
+
+    if (this.head.value === targetValue) {
+      const newNode = new Node(newValue);
+      newNode.next = this.head;
+      this.head = newNode;
+    } else {
+      let current = this.head;
+
+      while (current.next) {
+        if (current.next.value === targetValue) {
+          // if the next node is the one we're looking for
+          // set a temp
+          let placeHolder = current.next;
+          // replace the current next
+          let newNode = new Node(newValue);
+          newNode.next = placeHolder;
+          current.next = newNode;
+          return;
+        }
+        current = current.next;
+      }
+      return new Error("Target value is not found");
+    }
+  }
+
+  insertAfter(targetValue, newValue) {
+    let current = this.head;
+
+    while (current.next) {
+      // if current value is what we want
+      if (current.value === targetValue) {
+        // check if next is null
+        if (current.next === null) {
+          current.next = new Node(newValue);
+        } else {
+          // if its not null keep the value as a place holder
+          let placeholder = current.next;
+          // create new node
+          let newNode = new Node(newValue);
+          // set next to the new value
+          current.next = newNode;
+          // add placeholder back into list
+          newNode.next = placeholder;
+        }
+      }
+      current = current.next;
+    }
+    // if we didn't the value
+    return new Error("Value not found");
   }
 }
 
