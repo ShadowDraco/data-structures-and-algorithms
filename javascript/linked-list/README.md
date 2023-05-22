@@ -4,7 +4,11 @@ Build your own linked list class for future use!
 
 ## Approach & Efficiency
 
+- We approached the new functions by visualizing and stepping through them before writing the code. Then after we finished out whiteboard tested the code in an ide and putting both eyes on it to fix any errors we could have made.
+
 ## Whiteboard process
+
+![insertions whiteboard](./assets/CodeChallenge6.png)
 
 ### What is a linked list?
 

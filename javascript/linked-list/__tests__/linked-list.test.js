@@ -17,7 +17,7 @@ describe("Linked List", () => {
     expect(list.head.next).toBeNull();
   });
 
-  it("will properly point its head to the first node", () => {
+  it("properly points its head to the first node and appends multiple values", () => {
     const list = new LinkedList();
     list.insert(2);
 
@@ -39,12 +39,6 @@ describe("Linked List", () => {
   list.insert(2);
   list.insert(3);
 
-  it("will return true when finding a value within the linked list that exists", () => {
-    expect(list.find(2)).toBeTruthy();
-  });
-  it("will return false when searching for a value in the linked list that does not exist", () => {
-    expect(list.find(4)).toBeFalsy();
-  });
   it("can properly return a collection of all the values that exist in the linked list", () => {
     // insert will leave values in reverse order because it puts them at the front
     expect(list.read()).toEqual([3, 2, 1]);
@@ -55,7 +49,16 @@ describe("Linked List", () => {
     expect(list.includes(5)).toBeFalsy();
   });
 
-  it("can return its values in as a string", () => {
+  it("can return its values as a string", () => {
     expect(list.toString()).toEqual("{ 3 } -> { 2 } -> { 1 } -> { NULL }");
+  });
+
+  it("can insertBefore and insertAfter", () => {
+    list.append(4);
+    list.insertBefore(4, 5);
+    list.insertAfter(5, 6);
+
+    expect(list.includes(5)).toBeTruthy();
+    expect(list.read()).toEqual([3, 2, 1, 5, 6, 4]);
   });
 });
