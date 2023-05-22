@@ -9,7 +9,7 @@ describe("Linked List", () => {
     expect(list.head).toBeNull();
   });
 
-  it("can properly insert into the linked list", () => {
+  it("can properly insert into the list", () => {
     const list = new LinkedList();
     list.insert(1);
 
@@ -17,7 +17,7 @@ describe("Linked List", () => {
     expect(list.head.next).toBeNull();
   });
 
-  it("will properly point head to the first node in the linked list", () => {
+  it("will properly point its head to the first node", () => {
     const list = new LinkedList();
     list.insert(2);
 
@@ -45,8 +45,17 @@ describe("Linked List", () => {
   it("will return false when searching for a value in the linked list that does not exist", () => {
     expect(list.find(4)).toBeFalsy();
   });
-  it("Can properly return a collection of all the values that exist in the linked list", () => {
+  it("can properly return a collection of all the values that exist in the linked list", () => {
     // insert will leave values in reverse order because it puts them at the front
     expect(list.read()).toEqual([3, 2, 1]);
+  });
+
+  it("can determine if a value is included", () => {
+    expect(list.includes(2)).toBeTruthy();
+    expect(list.includes(5)).toBeFalsy();
+  });
+
+  it("can return its values in as a string", () => {
+    expect(list.toString()).toEqual("{ 3 } -> { 2 } -> { 1 } -> { NULL }");
   });
 });

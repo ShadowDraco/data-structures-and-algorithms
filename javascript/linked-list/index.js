@@ -49,8 +49,6 @@ class LinkedList {
       current = current.next;
     }
 
-    console.log(valueList);
-
     return valueList;
   }
 
@@ -59,10 +57,37 @@ class LinkedList {
 
     while (current !== null) {
       if (current.value === value) return current.value;
+
       current = current.next;
     }
 
     return false;
+  }
+
+  includes(value) {
+    let current = this.head;
+
+    while (current !== null) {
+      if (current.value === value) return true;
+
+      current = current.next;
+    }
+
+    return false;
+  }
+
+  toString() {
+    let result = "";
+    let current = this.head;
+
+    while (current !== null) {
+      result += `{ ${current.value} } -> `;
+      current = current.next;
+    }
+
+    result += "{ NULL }";
+
+    return result;
   }
 }
 
