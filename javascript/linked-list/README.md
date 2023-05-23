@@ -8,11 +8,15 @@ Build your own linked list class for future use!
 
 ## Whiteboard process
 
-![insertions whiteboard](./assets/CodeChallenge6.png)
+- With Coriana Williams
+  ![insertions whiteboard](./assets/CodeChallenge6.png)
+- With Reed Vogt
+  ![kth-from-end whiteboard](./assets/CodeChallenge7.png)
+  correction- kthFromEnd(k) worst case is BigO(2n-1) because the value may be 1 space from the end and loop through the list 2n-1 times.
 
 ### What is a linked list?
 
-Node: 'Container' that holds daya. an Object instance
+Node: 'Container' that holds data. an Object instance
 
 - Linked list:
 

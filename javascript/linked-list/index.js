@@ -79,7 +79,7 @@ class LinkedList {
   }
 
   insertBefore(targetValue, newValue) {
-    if (!this.head) throw new Error("List is empty");
+    if (!this.head) return "List is empty";
 
     if (this.head.value === targetValue) {
       const newNode = new Node(newValue);
@@ -101,7 +101,7 @@ class LinkedList {
         }
         current = current.next;
       }
-      return new Error("Target value is not found");
+      return "Target value is not found";
     }
   }
 
@@ -128,7 +128,40 @@ class LinkedList {
       current = current.next;
     }
     // if we didn't the value
-    return new Error("Value not found");
+    return "Value not found";
+  }
+
+  kthFromEnd(k) {
+    if (k < 0) return "k cannot be negative";
+
+    let current = this.head;
+    let listLength = 0;
+
+    // traverse the list to find the length
+    while (current.next) {
+      current = current.next;
+      listLength++;
+    }
+
+    if (listLength === 0) return this.head.value;
+    // return last value if k = 0
+    if (k === 0) return current.value;
+    // return the head if k = the length of the list
+    if (k === listLength) return this.head.value;
+
+    if (k > listLength) {
+      return "k is greater than list length";
+    }
+
+    // reset current to head to traverse the list again
+    current = this.head;
+
+    // traverse the amount of spaces from the end we want to go
+    for (let i = 0; i < listLength - k; i++) {
+      current = current.next;
+    }
+
+    return current.value;
   }
 }
 

@@ -33,7 +33,7 @@ describe("Linked List", () => {
     expect(list.head.next.next.value).toEqual(3);
     expect(list.head.next.next.next).toBeNull();
   });
-  // one list for the rest of the tests
+  // one list for many of the next tests here down
   const list = new LinkedList();
   list.insert(1);
   list.insert(2);
@@ -61,5 +61,37 @@ describe("Linked List", () => {
 
     expect(list.includes(5)).toBeTruthy();
     expect(list.read()).toEqual([0, 3, 2, 1, 5, 6, 4]);
+  });
+
+  it("insertBefore and insertAfter, expected failures", () => {
+    expect(list.insertBefore(12, 1)).toBe("Target value is not found");
+    expect(list.insertAfter(12, 1)).toEqual("Value not found");
+
+    const newList = new LinkedList();
+    expect(newList.insertBefore(1, 3)).toEqual("List is empty");
+  });
+
+  it("can determine kth from end", () => {
+    // new list for these tests
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    // happy path
+    expect(list.kthFromEnd(2)).toEqual(3);
+    // more than length
+    expect(list.kthFromEnd(10)).toEqual("k is greater than list length");
+    // negatives
+    expect(list.kthFromEnd(-1)).toEqual("k cannot be negative");
+    // k = length
+    expect(list.kthFromEnd(4)).toEqual(1);
+  });
+
+  it("returns the right value from kthFromEnd() when list length = 1", () => {
+    const list = new LinkedList();
+    list.insert(1);
+    expect(list.kthFromEnd(3)).toEqual(1);
   });
 });
