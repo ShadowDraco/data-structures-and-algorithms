@@ -2,6 +2,7 @@
 
 // Require our linked list implementation
 const LinkedList = require("../index");
+const zipLists = require("../zipList");
 
 describe("Linked List", () => {
   it("instantiates a new linked list", () => {

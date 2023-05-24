@@ -13,6 +13,8 @@ Build your own linked list class for future use!
 - With Reed Vogt
   ![kth-from-end whiteboard](./assets/CodeChallenge7.png)
   correction- kthFromEnd(k) worst case is BigO(2n-1) because the value may be 1 space from the end and loop through the list 2n-1 times.
+- With Kao Saelor
+- ![zip list whiteboard](assets/CodeChallenge8.png)
 
 ### What is a linked list?
 
