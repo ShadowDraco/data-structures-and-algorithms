@@ -1,13 +1,60 @@
 "use strict";
 
-// Require the linked list implementation
-const LinkedList = require("../../linked-list");
+const { Queue } = require("../index");
 
-// placeholder for future testing
-describe("Linked List", () => {
-  it("instantiates a new linked list", () => {
-    const list = new LinkedList();
-    expect(list.head).toBeNull();
+describe("Queue", () => {
+  it("It can successfully instantiate a new Queue", () => {
+    let queue = new Queue();
+    expect(queue).toBeTruthy();
+  });
+  it("Peeking empty queue throws an error", () => {
+    let queue = new Queue();
+
+    expect(() => {
+      queue.peek();
+    }).toThrow();
+  });
+  it("Can successfully enqueue onto a queue", () => {
+    let queue = new Queue();
+    queue.enqueue(1);
+    expect(queue.front.value).toEqual(1);
+    expect(queue.front.next).toBeNull();
+  });
+  it("Can successfully enqueue multiple values onto a queue", () => {
+    let queue = new Queue();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.front.value).toEqual(1);
+    expect(queue.front.next.value).toEqual(2);
+    expect(queue.front.next.next.value).toEqual(3);
+    expect(queue.front.next.next.next).toBeNull();
+  });
+  it("Can successfully dequeue multiple values off a queue and be empty", () => {
+    let queue = new Queue();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.front.value).toEqual(1);
+    expect(queue.front.next.value).toEqual(2);
+    expect(queue.front.next.next.value).toEqual(3);
+    expect(queue.front.next.next.next).toBeNull();
+    queue.dequeue();
+    expect(queue.front.value).toEqual(2);
+    expect(queue.front.next.value).toEqual(3);
+
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue.isEmpty()).toEqual(true);
+  });
+  it("Can successfully peek the next value in the queue", () => {
+    let queue = new Queue();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.peek()).toEqual(1);
+    queue.dequeue();
+    expect(queue.peek()).toEqual(2);
   });
 });
 

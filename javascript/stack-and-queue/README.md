@@ -8,44 +8,31 @@ Build your own linked list class for future use!
 
 ## Whiteboard process
 
-- With Coriana Williams
-  ![insertions whiteboard](./assets/CodeChallenge6.png)
-- With Reed Vogt
-  ![kth-from-end whiteboard](./assets/CodeChallenge7.png)
-  correction- kthFromEnd(k) worst case is BigO(2n-1) because the value may be 1 space from the end and loop through the list 2n-1 times.
-- With Kao Saelor
-- ![zip list whiteboard](assets/CodeChallenge8.png)
+- ![Whiteboard 1](assets/WhiteBoardClass10.png)
 
-### What is a linked list?
+### What is a Stack/Queue
 
-Node: 'Container' that holds data. an Object instance
+Stacks are a data structure consisting of nodes. It's basically a linked list with a specific use case... To order things FILO or LIFO. First in Last Out, or Last in First Out. Unlike a line at the store which is First in FIRST OUT, stacks are the opposite. In terms of linked lists, the HEAD becomes TOP, and the names of functions in reference to a Stack is different, however much of the base functionality is greatly the same! Queues are like a line at the store. First in first out. Or Last in last out. Very similar even when the terminology is mixed up a bit.
 
-- Linked list:
+### Tests
 
-  - linear data structure made of a series of nodes
-  - has a head property starting with a value of null
-  - .
-  - singly linked: {1} -> {2} -> null
-  - double linked: {1} <-> {2} <-> null
-  - Head: property of the _linked list_
-  - Next: a property of the _node_ - begins as null
-    - assigned to the _value_ or _data_ property (interchangeable)
-  - Prev: only for doubly linked list, goes to previous value
-  - Current: value currently being inspected
+- Can successfully push onto a stack
+  Can successfully push multiple values onto a stack
+  Can successfully pop off the stack
+  Can successfully empty a stack after multiple pops
+  Can successfully peek the next item on the stack
+  Can successfully instantiate an empty stack
+  Calling pop or peek on empty stack raises exception
 
-- Tests
-
-Can successfully instantiate an empty linked list
-Can properly insert into the linked list
-The head property will properly point to the first node in the linked list
-Can properly insert multiple nodes into the linked list
-Will return true when finding a value within the linked list that exists
-Will return false when searching for a value in the linked list that does not exist
-Can properly return a collection of all the values that exist in the linked list
+- Can successfully enqueue into a queue
+  Can successfully enqueue multiple values into a queue
+  Can successfully dequeue out of a queue the expected value
+  Can successfully peek into a queue, seeing the expected value
+  Can successfully empty a queue after multiple dequeues
+  Can successfully instantiate an empty queue
+  Calling dequeue or peek on empty queue raises exception
 
 ## Solution
 
-- run `npm test linked-list` to confirm all tests for linked lists
-- To run and test the code simply instantiate a new linked list `const list = new LinkedList()`
-- `list.insert(value)` and `list.append(value)` to fill out the list, then run `find()` and `read()` functions to view and query the list.
-- optionally pass `type = 'value' | 'object'` to the `read()` function to view the list as an array of values or an array of objects.
+- run `npm test stack-and-queue` to confirm all tests for Both stacks and queues
+- To run and test the code simply instantiate a new linked list `const queue/stack = new Queue/Stack()`
