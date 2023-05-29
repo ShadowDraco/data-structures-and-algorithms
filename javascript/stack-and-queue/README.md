@@ -1,6 +1,6 @@
-# Stacks and Queues
+# Linked List
 
-Build your own Stack and Queue classes for future use!
+Build your own linked list class for future use!
 
 ## Approach & Efficiency
 
@@ -8,14 +8,14 @@ Build your own Stack and Queue classes for future use!
 
 ## Whiteboard process
 
-- With Ryan Gallaway
-- ![Code Challenge 10](./assets/CodeChallenge10.png)
+- ![Whiteboard 1](assets/WhiteBoardClass10.png)
 
-### What is Stack / Queue ?
+### What is a Stack/Queue
 
 Stacks are a data structure consisting of nodes. It's basically a linked list with a specific use case... To order things FILO or LIFO. First in Last Out, or Last in First Out. Unlike a line at the store which is First in FIRST OUT, stacks are the opposite. In terms of linked lists, the HEAD becomes TOP, and the names of functions in reference to a Stack is different, however much of the base functionality is greatly the same! Queues are like a line at the store. First in first out. Or Last in last out. Very similar even when the terminology is mixed up a bit.
 
-- Tests
+### Tests
+
 - Can successfully push onto a stack
   Can successfully push multiple values onto a stack
   Can successfully pop off the stack
@@ -23,7 +23,7 @@ Stacks are a data structure consisting of nodes. It's basically a linked list wi
   Can successfully peek the next item on the stack
   Can successfully instantiate an empty stack
   Calling pop or peek on empty stack raises exception
-  <br>
+
 - Can successfully enqueue into a queue
   Can successfully enqueue multiple values into a queue
   Can successfully dequeue out of a queue the expected value
@@ -34,7 +34,5 @@ Stacks are a data structure consisting of nodes. It's basically a linked list wi
 
 ## Solution
 
-- run `npm test linked-list` to confirm all tests for linked lists
-- To run and test the code simply instantiate a new linked list `const list = new LinkedList()`
-- `list.insert(value)` and `list.append(value)` to fill out the list, then run `find()` and `read()` functions to view and query the list.
-- optionally pass `type = 'value' | 'object'` to the `read()` function to view the list as an array of values or an array of objects.
+- run `npm test stack-and-queue` to confirm all tests for Both stacks and queues
+- To run and test the code simply instantiate a new linked list `const queue/stack = new Queue/Stack()`
