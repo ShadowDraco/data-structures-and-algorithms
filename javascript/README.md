@@ -93,4 +93,3 @@ Note that when you check your code into GitHub, all of your tests will automatic
 - code-challenges from 301
 - [linked-list](./linked-list/README.md)
 - [stack-queue](./stack-and-queue/readme.md)
-- [pseudo-queue](./pseudo-queue/README.md)

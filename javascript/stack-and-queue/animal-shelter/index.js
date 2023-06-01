@@ -23,7 +23,7 @@ class AnimalShelter {
     } else if (type === "cat") {
       this.queue.enqueue(new Cat(name));
     } else {
-      throw new Error("We don't take those here");
+      throw new Error("We don't take those here for some reason");
     }
   }
   dequeue(pref) {
