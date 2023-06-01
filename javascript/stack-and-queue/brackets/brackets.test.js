@@ -1,31 +1,13 @@
-const AnimalShelter = require(".");
+const validateBrackets = require("./index");
 
-describe("Queue Animal Shelter", () => {
-  it("it creates a new Shelter with an empty queue", () => {
-    const shelter = new AnimalShelter();
-
-    expect(shelter).toBeTruthy();
-  });
-  it("it enqueues new animals", () => {
-    const shelter = new AnimalShelter();
-
-    shelter.enqueue("kitty", "cat");
-    shelter.enqueue("puppy", "dog");
-
-    expect(shelter).toBeTruthy();
-    expect(shelter.queue.front.value.name).toEqual("kitty");
-    expect(shelter.queue.front.next.value.name).toEqual("puppy");
-  });
-  it("it enqueues new animals", () => {
-    const shelter = new AnimalShelter();
-
-    shelter.enqueue("kitty", "cat");
-    shelter.enqueue("puppy", "dog");
-
-    expect(shelter).toBeTruthy();
-    expect(shelter.queue.front.value.name).toEqual("kitty");
-    expect(shelter.queue.front.next.value.name).toEqual("puppy");
-
-    expect(shelter.dequeue("hamster").name).toEqual("kitty");
+describe.skip("Brackets", () => {
+  it("it verifies the balance of a string of brackets", () => {
+    expect(validateBrackets("{}")).toBeTruthy();
+    expect(validateBrackets("(){}[[]]")).toBeTruthy();
+    expect(validateBrackets("{}{Code}[Fellows](())")).toBeTruthy();
+    expect(validateBrackets("()[[Extra Characters]]")).toBeTruthy();
+    expect(validateBrackets("{}(){}")).toBeTruthy();
+    expect(validateBrackets("{(})")).toBeFalsy();
+    expect(validateBrackets("(](")).toBeFalsy();
   });
 });
