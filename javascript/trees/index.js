@@ -10,8 +10,8 @@ class Node {
 }
 
 class Tree {
-  constructor() {
-    this.root = null;
+  constructor(value = null) {
+    this.root = value ? new Node(value) : null;
   }
 
   preOrder() {
@@ -82,41 +82,4 @@ class Tree {
   }
 }
 
-class BinarySearchTree extends Tree {
-  add(value) {
-    if (!this.root) {
-      this.root = new Node(value);
-      return;
-    }
-
-    function traverse(root) {
-      if (value > root.value) {
-        root.right ? traverse(root.right) : (root.right = new Node(value));
-      } else {
-        root.left ? traverse(root.left) : (root.left = new Node(value));
-      }
-    }
-    traverse(this.root);
-  }
-
-  contains(value) {
-    // declare variable outside of the recursion because return true doesn't work??
-    let found = false;
-    function traverse(root) {
-      if (root.value === value) {
-        found = true;
-        return;
-      }
-
-      if (value > root.value) {
-        root.right ? traverse(root.right) : (root.right.value = value);
-      } else {
-        root.left ? traverse(root.left) : (root.left.value = value);
-      }
-    }
-    // start traversing to search
-    traverse(this.root);
-
-    return found;
-  }
-}
+module.exports = { Tree, Node };

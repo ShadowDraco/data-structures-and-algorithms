@@ -1,4 +1,4 @@
-# Linked List
+# Stack and Queue
 
 Build your own linked list class for future use!
 
