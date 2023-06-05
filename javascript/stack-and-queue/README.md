@@ -1,4 +1,4 @@
-# Linked List
+# Stack and Queue
 
 Build your own linked list class for future use!
 
@@ -11,6 +11,7 @@ Build your own linked list class for future use!
 - ![Whiteboard 1](assets/WhiteBoardClass10.png)
 - [psuedo-queue](./pseudo-queue/README.md)
 - [animal-shelter queues](./animal-shelter/README.md)
+- [brackets](./brackets/README.md)
 
 ### What is a Stack/Queue
 
