@@ -8,7 +8,7 @@
 
 ## Whiteboard process
 
-- ![Whiteboard 1](assets/WhiteBoardClass15.png)
+- ![Whiteboard 1](assets/CodeChallnege15.png)
 
 ### What is a Tree?
 
