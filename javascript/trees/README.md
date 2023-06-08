@@ -11,6 +11,7 @@
 - ![Whiteboard 1](assets/CodeChallenge15.png)
 - ![Whiteboard 2](assets/CodeChallenge16.png)
 - ![Whiteboard 3](assets/CodeChallenge17.png)
+- ![Whiteboard 4](assets/CodeChallenge18.png)
 
 ### What is a Tree?
 
