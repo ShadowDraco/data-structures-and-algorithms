@@ -5,6 +5,7 @@ class Node {
     this.value = value;
     this.left = null;
     this.right = null;
+    this.parent = null;
     this.children = new Array(k).fill(null);
   }
 }
