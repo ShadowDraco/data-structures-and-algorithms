@@ -4,7 +4,7 @@ Write a function called insertion sort that uses array insertion properties to s
 
 ## Whiteboard Process
 
-![Whiteboard for Insertion Sort](./assets/UMLInsertionSort.png)
+![Whiteboard for Insertion Sort](./assets/CodeChallenge26.png)
 
 ## Approach & Efficiency
 

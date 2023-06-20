@@ -94,4 +94,5 @@ Note that when you check your code into GitHub, all of your tests will automatic
   - [linked-list](./401-code-challenges/linked-list/README.md)
   - [stack-queue](./401-code-challenges/stack-and-queue/readme.md)
   - [trees](./401-code-challenges/trees/README.md)
+  - [insertion-sort](./401-code-challenges/insertion-sort/README.md)
 - [code-challenges from 301](./code-challenges/README.md)
