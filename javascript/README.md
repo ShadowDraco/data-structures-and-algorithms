@@ -85,12 +85,13 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 
 Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the **Actions** tab
 
-- TOC:
+#### TOC:
+
 - code-challenges from 401
-- [array-binary-search](./array-binary-search/README.md)
-- [array-insert-shift](./array-insert-shift/README.md)
-- [array-reverse](./array-reverse/README.md)
-- code-challenges from 301
-- [linked-list](./linked-list/README.md)
-- [stack-queue](./stack-and-queue/readme.md)
-- [trees](./trees/README.md)
+  - [array-binary-search](./401-code-challenges/array-binary-search/README.md)
+  - [array-insert-shift](./401-code-challenges/array-insert-shift/README.md)
+  - [array-reverse](./401-code-challenges/array-reverse/README.md)
+  - [linked-list](./401-code-challenges/linked-list/README.md)
+  - [stack-queue](./401-code-challenges/stack-and-queue/readme.md)
+  - [trees](./401-code-challenges/trees/README.md)
+- [code-challenges from 301](./code-challenges/README.md)
