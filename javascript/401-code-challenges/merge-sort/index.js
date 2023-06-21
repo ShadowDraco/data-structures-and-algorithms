@@ -47,6 +47,4 @@ const merge = (left, right, array) => {
   return array;
 };
 
-console.log("AFTER: ", mergeSort([8, 4, 2, 7, 6, 10, 13]));
-
 module.exports = mergeSort;
