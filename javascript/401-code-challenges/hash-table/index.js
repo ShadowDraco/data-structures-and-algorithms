@@ -1,5 +1,5 @@
 "use strict";
-const LinkedList = require("../../linked-list");
+const LinkedList = require("../linked-list");
 
 class HashTable {
   constructor(size) {
@@ -29,10 +29,10 @@ class HashTable {
     if (approach === "linked-list") {
       if (this.buckets[position]) {
         let bucket = this.buckets[position];
-        bucket.add(data);
+        bucket.append(data);
       } else {
         let bucket = new LinkedList();
-        bucket.add(data);
+        bucket.append(data);
         this.buckets[position] = bucket;
       }
     }
