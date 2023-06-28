@@ -16,4 +16,4 @@ All tests associated with this function are available with `npm test repeatedWor
 
 #### Whiteboard process
 
-![Code Challenge 32 UML](./assets/CodeChallenge32.png)
+![Code Challenge 31 UML](./assets/CodeChallenge31.png)
