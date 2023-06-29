@@ -58,6 +58,7 @@ describe("Hash Table", () => {
 
     expect(hashTable.get("aaaaa")).toEqual("a's");
     expect(hashTable.get("Hash")).toEqual("my hash");
+    expect(hashTable.get("dsafdsaf")).toEqual(undefined);
   });
 
   it("can see if table has values", () => {
