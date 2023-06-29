@@ -31,3 +31,4 @@ To run the code simply call one of the lookup or set functions on a hashtable in
 
 [repeatedWord Function](./repeatedWord/README.md)
 [tree_intersection Function](./tree_intersection/README.md)
+[leftJoin Function](./leftJoin/READEME.md)
