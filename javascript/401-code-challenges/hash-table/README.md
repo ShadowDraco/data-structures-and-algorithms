@@ -26,3 +26,8 @@ The hash table contains:
 <!-- Show how to run your code, and examples of it in action -->
 
 To run the code simply call one of the lookup or set functions on a hashtable instance in the file, Tests will also be available with `npm test hash-table`
+
+### Related
+
+[repeatedWord Function](./repeatedWord/README.md)
+[tree_intersection Function](./tree_intersection/README.md)
