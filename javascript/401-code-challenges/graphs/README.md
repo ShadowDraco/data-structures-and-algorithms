@@ -44,3 +44,8 @@ This graph implementation is represented as an adjacency list, and includes the 
 5. Neighbors are returned with the weight between nodes included
 6. The proper size is returned, representing the number of nodes in the graph
 7. A graph with only one node and edge can be properly returned
+
+### Related Functions
+
+- [Business trip](./businessTrip/README.md)
+  - Combine the edge (prices) of traveling during a business trip. Trip prices are found and calculated from a graph with specific prices for flights

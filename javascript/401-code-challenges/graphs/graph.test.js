@@ -1,6 +1,6 @@
 "use strict";
 
-const { Vertex, Edge, Graph } = require(".");
+const { Graph } = require(".");
 
 describe("Graph", () => {
   it("can initialize", () => {
