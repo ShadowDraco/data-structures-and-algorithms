@@ -34,6 +34,10 @@ This graph implementation is represented as an adjacency list, and includes the 
   - Arguments: none
   - Returns the total number of nodes in the graph
   - 0 if there are none
+- breadthFirst
+  - Arguments: root, callback
+  - Returns nothing
+  - Callback will mutate or log the data separately.
 
 ## Tests will prove the following functionality:
 
