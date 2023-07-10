@@ -37,6 +37,7 @@ class Graph {
 
   breadthFirst(root, callback) {
     const queue = [root];
+
     const visited = new Set();
     visited.add(root);
     let current = null;
