@@ -38,6 +38,10 @@ This graph implementation is represented as an adjacency list, and includes the 
   - Arguments: root, callback
   - Returns nothing
   - Callback will mutate or log the data separately.
+- depthFirst
+  - Arguments: root, callback
+  - Returns nothing
+  - Callback will mutate or log the data separately.
 
 ## Tests will prove the following functionality:
 
